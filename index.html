@@ -19,13 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"a11y-light","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script>
 
-    <meta name="description" content="专注于编程技术分享的个人博客，涵盖前端开发、后端架构、编程基础和工具资源，持续更新技术文章和学习笔记。">
+    <meta name="description" content="IRN       全栈开发者 &amp; 技术博主       专注于编程技术分享，热爱探索前沿技术，致力于构建优雅高效的解决方案。                    联系我                              GitHub                                邮箱">
 <meta property="og:type" content="website">
-<meta property="og:title" content="NoxAurora">
+<meta property="og:title" content="首页">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="NoxAurora">
-<meta property="og:description" content="专注于编程技术分享的个人博客，涵盖前端开发、后端架构、编程基础和工具资源，持续更新技术文章和学习笔记。">
+<meta property="og:description" content="IRN       全栈开发者 &amp; 技术博主       专注于编程技术分享，热爱探索前沿技术，致力于构建优雅高效的解决方案。                    联系我                              GitHub                                邮箱">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-04-08T15:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-08T18:39:58.771Z">
 <meta property="article:author" content="IRN">
 <meta property="article:tag" content="编程,前端开发,后端开发,技术博客,学习笔记,JavaScript,Python,React,Node.js">
 <meta name="twitter:card" content="<twitter:card>">
@@ -39,10 +41,11 @@
 <link rel="canonical" href="http://example.com/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"http://example.com/index.html","path":"/index.html","title":"首页"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>NoxAurora</title>
+<title>首页 | NoxAurora
+</title>
   
 
 
@@ -1467,7 +1470,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #24a79a;
+    background: #0ac350;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1717,6 +1720,11 @@ pre code {
   border: 1px solid #eee;
   max-width: 120px;
   padding: 2px;
+  border-radius: 50%;
+  transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  transform: rotateZ(360deg);
 }
 .site-author-name {
   color: var(--text-color);
@@ -3050,10 +3058,163 @@ select {
     margin-bottom: 20px;
   }
 }
+/* 科技感背景样式 */
+:root {
+  --tech-primary: #0ff0fc;
+  --tech-secondary: #7a04eb;
+  --tech-dark: #0a0a1a;
+  --tech-grid: rgba(10,255,255,0.1);
+}
+/* 背景画布容器 */
+#tech-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -9999;
+  pointer-events: none;
+  background: linear-gradient(135deg, #0a0a1a 0%, #13133a 50%, #0a1a2a 100%);
+}
+/* 确保内容在背景之上 */
+body {
+  position: relative;
+  background: transparent !important;
+}
+/* 为文章内容添加透明背景，平衡背景可见性和文字可读性 */
+.main-inner {
+  background: rgba(75,75,103,0.6);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(208,216,216,0.1);
+  backdrop-filter: blur(12px);
+}
+/* 头部导航栏透明效果 - 更透明 */
+.header-inner {
+  background: rgba(10,10,26,0.7);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(10,255,255,0.3);
+}
+/* 增强文字可读性 - 更高对比度 */
+body {
+  color: #f0f0ff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+/* 链接科技感颜色 */
+a {
+  color: var(--tech-primary);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(10,255,255,0.5);
+}
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 20px var(--tech-primary), 0 0 30px rgba(10,255,255,0.8);
+}
+/* 按钮科技感样式 */
+.btn {
+  background: linear-gradient(90deg, var(--tech-secondary), var(--tech-primary));
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 8px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: none;
+  box-shadow: 0 4px 15px rgba(10,255,255,0.3);
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(10,255,255,0.6);
+}
+/* 代码块科技感边框 - 更透明 */
+.highlight {
+  border: 1px solid rgba(10,255,255,0.5);
+  border-radius: 8px;
+  background: rgba(10,20,30,0.6) !important;
+  backdrop-filter: blur(10px);
+}
+/* 标题科技感渐变 */
+.post-title a {
+  background: linear-gradient(90deg, var(--tech-primary), var(--tech-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+/* 页脚透明效果 - 更透明 */
+.footer {
+  background: rgba(10,10,26,0.7);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(10,255,255,0.3);
+}
+/* 增强文章内容可读性 - 更高对比度 */
+.post-body p {
+  color: #f5f5ff;
+  line-height: 1.8;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+.post-body h1,
+.post-body h2,
+.post-body h3,
+.post-body h4 {
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+/* 卡片透明效果增强 - 更透明 */
+.card,
+.post-block,
+.sidebar-inner {
+  background: rgba(18,18,36,0.6);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(10,255,255,0.3);
+}
+/* 表格透明效果 - 更透明 */
+table {
+  background: rgba(18,18,36,0.55);
+  backdrop-filter: blur(10px);
+}
+table th {
+  background: rgba(10,255,255,0.2);
+}
+table td {
+  background: rgba(18,18,36,0.5);
+}
+/* 额外透明效果增强 */
+.post-meta {
+  background: rgba(18,18,36,0.55);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(10,255,255,0.2);
+}
+.pagination {
+  background: rgba(18,18,36,0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(10,255,255,0.25);
+}
+/* 暗色模式调整 */
+.dark-mode #tech-background {
+  background: linear-gradient(135deg, #050510 0%, #0a0a1a 50%, #05101a 100%);
+}
+.dark-mode .main-inner {
+  background: rgba(10,10,20,0.65);
+}
+/* 响应式调整 */
+@media (max-width: 767px) {
+  .main-inner {
+    padding: 20px 15px;
+    margin: 10px;
+  }
+  #tech-background {
+/* 移动端性能优化 */
+    opacity: 0.9;
+  }
+}
 </style><noscript>
     
   </noscript>
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css');loadCss('https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');loadCss('https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css"></noscript></head>
+<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css');loadCss('https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');loadCss('https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript></head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -3073,7 +3234,7 @@ select {
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">NoxAurora</h1>
+      <p class="site-title">NoxAurora</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">技术分享与学习笔记</p>
@@ -3100,7 +3261,7 @@ select {
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -3113,11 +3274,13 @@ select {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">IRN</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">联系我</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text">兴趣爱好</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.1.</span> <span class="nav-text">编程开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.2.</span> <span class="nav-text">技术阅读</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.3.</span> <span class="nav-text">游戏设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.4.</span> <span class="nav-text">音乐欣赏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.3.</span> <span class="nav-text">个人经历</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.3.1.</span> <span class="nav-text">全栈开发者</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.3.2.</span> <span class="nav-text">前端工程师</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.3.3.</span> <span class="nav-text">技术学习者</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.4.</span> <span class="nav-text">探索更多</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.4.1.</span> <span class="nav-text">博客文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.4.2.</span> <span class="nav-text">分类目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.4.3.</span> <span class="nav-text">标签云</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.4.4.</span> <span class="nav-text">关于我</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="IRN" src="/images/touxiang.jpg">
   <p class="site-author-name" itemprop="name">IRN</p>
   <div class="site-description" itemprop="description">专注于编程技术分享的个人博客，涵盖前端开发、后端架构、编程基础和工具资源，持续更新技术文章和学习笔记。</div>
 </div>
@@ -3160,287 +3323,470 @@ select {
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner page posts-expand">
+
 
     
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/18/api-and-api-key-introduction/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="IRN">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NoxAurora">
-      <meta itemprop="description" content="专注于编程技术分享的个人博客，涵盖前端开发、后端架构、编程基础和工具资源，持续更新技术文章和学习笔记。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | NoxAurora">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/18/api-and-api-key-introduction/" class="post-title-link" itemprop="url">API及API Key完全指南</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
+    
+    
+    <div class="post-block" lang="zh-CN">
       
+      
+      
+      <div class="post-body">
+          <div class="tech-homepage">
+  <!-- 个人信息卡片 -->
+  <div class="profile-card">
+    <div class="profile-avatar">
+      <img src="/images/touxiang.jpg" alt="IRN" class="avatar-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9IjEwMCIgZmlsbD0iIzBmZjBmYyIvPjx0ZXh0IHg9IjEwMCIgeT0iMTE1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNjAiIGZpbGw9IiMwMDAwMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkkmIzExNjsgUjwvdGV4dD48L3N2Zz4='">
+    </div>
+    <div class="profile-info">
+      <h1 class="profile-name">IRN</h1>
+      <p class="profile-title">全栈开发者 &amp; 技术博主</p>
+      <p class="profile-description">专注于编程技术分享，热爱探索前沿技术，致力于构建优雅高效的解决方案。</p>
+    </div>
+  </div>
 
-      <time title="创建时间：2026-03-18 12:00:00 / 修改时间：14:30:00" itemprop="dateCreated datePublished" datetime="2026-03-18T12:00:00+08:00">2026-03-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">技术教程</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">网络技术</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">编程基础</span></a>
-        </span>
-    </span>
+  <!-- 联系信息 -->
+  <div class="contact-section">
+    <h2 class="section-title">联系我</h2>
+    <div class="contact-links">
+      <a href="https://github.com/IRN-Hub" target="_blank" class="contact-link">
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+      </a>
+      <a href="mailto:2019524221@qq.com" class="contact-link">
+        <i class="fas fa-envelope"></i>
+        <span>邮箱</span>
+      </a>
+      <a href="#" class="contact-link">
+        <i class="fab fa-weibo"></i>
+        <span>微博</span>
+      </a>
+      <a href="#" class="contact-link">
+        <i class="fab fa-twitter"></i>
+        <span>Twitter</span>
+      </a>
+    </div>
+  </div>
 
-  
+  <!-- 兴趣爱好 -->
+  <div class="hobbies-section">
+    <h2 class="section-title">兴趣爱好</h2>
+    <div class="hobbies-grid">
+      <div class="hobby-card">
+        <div class="hobby-icon">💻</div>
+        <h3 class="hobby-title">编程开发</h3>
+        <p class="hobby-desc">热爱前后端开发，关注新技术趋势</p>
+      </div>
+      <div class="hobby-card">
+        <div class="hobby-icon">📚</div>
+        <h3 class="hobby-title">技术阅读</h3>
+        <p class="hobby-desc">阅读技术文档、源码和优秀博客</p>
+      </div>
+      <div class="hobby-card">
+        <div class="hobby-icon">🎮</div>
+        <h3 class="hobby-title">游戏设计</h3>
+        <p class="hobby-desc">探索游戏开发与交互设计</p>
+      </div>
+      <div class="hobby-card">
+        <div class="hobby-icon">🎵</div>
+        <h3 class="hobby-title">音乐欣赏</h3>
+        <p class="hobby-desc">喜欢电子音乐和古典音乐</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 个人经历 -->
+  <div class="experience-section">
+    <h2 class="section-title">个人经历</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2024 - 至今</div>
+        <div class="timeline-content">
+          <h3>全栈开发者</h3>
+          <p>负责多个Web应用的前后端开发，技术栈包括React、Node.js、Python等。</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2022 - 2024</div>
+        <div class="timeline-content">
+          <h3>前端工程师</h3>
+          <p>专注于前端架构和用户体验优化，提升产品交互质量。</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2020 - 2022</div>
+        <div class="timeline-content">
+          <h3>技术学习者</h3>
+          <p>系统学习计算机科学基础知识，积累项目经验。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 导航目录 -->
+  <div class="navigation-section">
+    <h2 class="section-title">探索更多</h2>
+    <div class="nav-cards">
+      <a href="/blog" class="nav-card">
+        <div class="nav-icon">📝</div>
+        <h3 class="nav-title">博客文章</h3>
+        <p class="nav-desc">浏览所有技术文章</p>
+      </a>
+      <a href="/categories" class="nav-card">
+        <div class="nav-icon">📂</div>
+        <h3 class="nav-title">分类目录</h3>
+        <p class="nav-desc">按主题浏览文章分类</p>
+      </a>
+      <a href="/tags" class="nav-card">
+        <div class="nav-icon">🏷️</div>
+        <h3 class="nav-title">标签云</h3>
+        <p class="nav-desc">查看文章标签和热门话题</p>
+      </a>
+      <a href="/about" class="nav-card">
+        <div class="nav-icon">👤</div>
+        <h3 class="nav-title">关于我</h3>
+        <p class="nav-desc">了解更多个人信息</p>
+      </a>
+    </div>
+  </div>
 </div>
 
-        </div>
-      </header>
+<style>
+/* 首页自定义样式 */
+.tech-homepage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>深入理解API及API Key的概念、用法、安全实践和实际应用，涵盖REST API、GraphQL、认证授权、速率限制等核心知识。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2026/03/18/api-and-api-key-introduction/">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
+/* 个人信息卡片 */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: rgba(18, 18, 36, 0.55);
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 60px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(10, 255, 255, 0.45);
+  box-shadow: 0 20px 60px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 80px rgba(0, 255, 255, 0.15);
+}
+
+.profile-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #0ff0fc;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(10, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.avatar-img:hover {
+  transform: scale(1.05);
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 3.5rem;
+  margin: 0 0 10px 0;
+  background: linear-gradient(90deg, #0ff0fc, #7a04eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.profile-title {
+  font-size: 1.5rem;
+  color: #d8d8ff; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  margin: 0 0 20px 0;
+}
+
+.profile-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #f8f8ff; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+/* 区域标题 */
+.section-title {
+  font-size: 2.5rem;
+  margin: 80px 0 40px 0;
+  text-align: center;
+  background: linear-gradient(90deg, #0ff0fc, #7a04eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #0ff0fc, #7a04eb);
+  border-radius: 2px;
+}
+
+/* 联系信息 */
+.contact-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  background: rgba(18, 18, 36, 0.55);
+  border-radius: 50px;
+  text-decoration: none;
+  color: #0ff0fc;
+  font-size: 1.2rem;
+  border: 1px solid rgba(10, 255, 255, 0.45);
+  transition: all 0.3s ease;
+  text-shadow: 0 0 8px rgba(10, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.contact-link:hover {
+  background: rgba(10, 255, 255, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(10, 255, 255, 0.2);
+}
+
+.contact-link i {
+  font-size: 1.5rem;
+}
+
+/* 兴趣爱好网格 */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.hobby-card {
+  background: rgba(18, 18, 36, 0.55);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(10, 255, 255, 0.45);
+  transition: all 0.3s ease;
+}
+
+.hobby-card:hover {
+  transform: translateY(-10px);
+  border-color: #0ff0fc;
+  box-shadow: 0 20px 40px rgba(10, 255, 255, 0.15);
+}
+
+.hobby-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hobby-title {
+  font-size: 1.5rem;
+  margin: 0 0 10px 0;
+  color: #0ff0fc;
+  text-shadow: 0 0 10px rgba(10, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hobby-desc {
+  color: #f8f8ff; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* 时间线 */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #0ff0fc, #7a04eb);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 80px;
+}
+
+.timeline-date {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(10, 255, 255, 0.25);
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #0ff0fc;
+  font-weight: bold;
+  border: 1px solid rgba(10, 255, 255, 0.45);
+}
+
+.timeline-content {
+  background: rgba(18, 18, 36, 0.55);
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid rgba(10, 255, 255, 0.45);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: #0ff0fc;
+  box-shadow: 0 10px 30px rgba(10, 255, 255, 0.1);
+}
+
+.timeline-content h3 {
+  margin: 0 0 10px 0;
+  color: #0ff0fc;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px rgba(10, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-content p {
+  color: #f8f8ff; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* 导航卡片 */
+.nav-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.nav-card {
+  display: block;
+  text-decoration: none;
+  background: rgba(18, 18, 36, 0.55);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid rgba(10, 255, 255, 0.45);
+  transition: all 0.3s ease;
+}
+
+.nav-card:hover {
+  transform: translateY(-10px);
+  background: rgba(10, 255, 255, 0.25);
+  border-color: #0ff0fc;
+  box-shadow: 0 20px 40px rgba(10, 255, 255, 0.2);
+}
+
+.nav-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.nav-title {
+  font-size: 1.8rem;
+  margin: 0 0 10px 0;
+  color: #0ff0fc;
+  text-shadow: 0 0 10px rgba(10, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.nav-desc {
+  color: #f8f8ff; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .profile-name {
+    font-size: 2.5rem;
+  }
+  
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hobbies-grid,
+  .nav-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    padding-left: 60px;
+  }
+}
+
+/* 动画效果 */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.profile-avatar {
+  animation: float 6s ease-in-out infinite;
+}
+</style>
+
+<!-- 加载Font Awesome图标 -->
+
+      </div>
+      
+      
       
     </div>
 
     
     
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/15/%E7%90%86%E8%A7%A3JavaScript%E9%97%AD%E5%8C%85/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="IRN">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NoxAurora">
-      <meta itemprop="description" content="专注于编程技术分享的个人博客，涵盖前端开发、后端架构、编程基础和工具资源，持续更新技术文章和学习笔记。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | NoxAurora">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/15/%E7%90%86%E8%A7%A3JavaScript%E9%97%AD%E5%8C%85/" class="post-title-link" itemprop="url">深入理解JavaScript闭包</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2026-03-15 09:00:00 / 修改时间：14:30:00" itemprop="dateCreated datePublished" datetime="2026-03-15T09:00:00+08:00">2026-03-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">前端开发</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>详细解析JavaScript闭包的概念、原理、应用场景和常见问题，帮助你彻底理解这一重要概念。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2026/03/15/%E7%90%86%E8%A7%A3JavaScript%E9%97%AD%E5%8C%85/">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="IRN">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NoxAurora">
-      <meta itemprop="description" content="专注于编程技术分享的个人博客，涵盖前端开发、后端架构、编程基础和工具资源，持续更新技术文章和学习笔记。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | NoxAurora">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Python列表操作完全指南</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-03-14 14:30:00" itemprop="dateCreated datePublished" datetime="2026-03-14T14:30:00+08:00">2026-03-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-03-15 10:00:00" itemprop="dateModified" datetime="2026-03-15T10:00:00+08:00">2026-03-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">编程基础</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>深入理解Python列表操作，包括创建、访问、修改、遍历和高级用法，适合初学者和需要复习的开发者。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2026/03/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
 
 
 </div>
@@ -3479,7 +3825,520 @@ select {
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
+<!-- 高级科技感动画背景 -->
+<canvas id="tech-background"></canvas>
 
 
 
-<script src="/bundle.js"></script></body></html>
+<!-- 高级科技感装饰元素 -->
+<style>
+/* 背景画布 */
+#tech-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -9999;
+  pointer-events: none;
+}
+
+/* 数据流效果 */
+@keyframes dataFlow {
+  0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.data-flow {
+  position: fixed;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(to bottom,
+    transparent,
+    rgba(10, 255, 255, 0.8),
+    transparent);
+  pointer-events: none;
+  z-index: -9998;
+  animation: dataFlow 8s linear infinite;
+  filter: blur(1px);
+}
+
+/* 全息投影效果 */
+@keyframes hologram {
+  0%, 100% { opacity: 0.1; transform: translateY(0) rotateX(0); }
+  50% { opacity: 0.3; transform: translateY(-10px) rotateX(10deg); }
+}
+
+.hologram-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(90deg, transparent 49%, rgba(10, 255, 255, 0.1) 50%, transparent 51%),
+    linear-gradient(180deg, transparent 49%, rgba(10, 255, 255, 0.1) 50%, transparent 51%);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -9997;
+  opacity: 0.1;
+  animation: hologram 6s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+/* 能量节点 */
+.energy-node {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0ff0fc;
+  pointer-events: none;
+  z-index: -9998;
+  filter: blur(1px);
+  box-shadow: 0 0 20px 5px rgba(10, 255, 255, 0.5);
+}
+
+/* 扫描线 */
+.scan-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(10, 255, 255, 0.8),
+    transparent);
+  pointer-events: none;
+  z-index: -9998;
+  filter: blur(1px);
+  animation: scan 4s linear infinite;
+}
+
+@keyframes scan {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+  .data-flow, .scan-line {
+    display: none; /* 移动端性能优化 */
+  }
+
+  .hologram-effect {
+    opacity: 0.05;
+  }
+}
+</style>
+
+
+
+
+<script src="/bundle.js"></script><script>
+(function() {
+  'use strict';
+
+  // 确保在页面加载完成后初始化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTechBackground);
+  } else {
+    initTechBackground();
+  }
+
+  function initTechBackground() {
+    const canvas = document.getElementById('tech-background');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+    const particles = [];
+    const pulseWaves = [];
+    const particleCount = Math.min(120, Math.floor(width * height / 8000));
+    const connectionDistance = 150;
+    const mouse = { x: null, y: null, radius: 120 };
+    let time = 0;
+    let gradientOffset = 0;
+
+    // 脉冲波类
+    class PulseWave {
+      constructor(x, y) {
+        this.x = x || width / 2;
+        this.y = y || height / 2;
+        this.radius = 0;
+        this.maxRadius = Math.max(width, height) * 0.8;
+        this.speed = 2;
+        this.width = 2;
+        this.color = `rgba(10, 255, 255, 0.7)`;
+        this.active = true;
+      }
+
+      update() {
+        this.radius += this.speed;
+        if (this.radius > this.maxRadius) {
+          this.active = false;
+        }
+      }
+
+      draw() {
+        const alpha = 1 - this.radius / this.maxRadius;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(10, 255, 255, ${alpha * 0.5})`;
+        ctx.lineWidth = this.width;
+        ctx.stroke();
+      }
+    }
+
+    // 高级粒子类
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.size = Math.random() * 2.5 + 0.5;
+        this.speedX = Math.random() * 0.8 - 0.4;
+        this.speedY = Math.random() * 0.8 - 0.4;
+        this.color = `hsl(${Math.random() * 60 + 180}, 100%, 70%)`;
+        this.alpha = Math.random() * 0.6 + 0.3;
+        this.originalAlpha = this.alpha;
+        this.pulsePhase = Math.random() * Math.PI * 2;
+        this.pulseSpeed = Math.random() * 0.05 + 0.02;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        // 边界弹性
+        if (this.x > width) this.x = 0;
+        else if (this.x < 0) this.x = width;
+        if (this.y > height) this.y = 0;
+        else if (this.y < 0) this.y = height;
+
+        // 鼠标交互
+        if (mouse.x !== null && mouse.y !== null) {
+          const dx = mouse.x - this.x;
+          const dy = mouse.y - this.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < mouse.radius) {
+            const angle = Math.atan2(dy, dx);
+            const force = (mouse.radius - distance) / mouse.radius;
+            this.x -= Math.cos(angle) * force * 8;
+            this.y -= Math.sin(angle) * force * 8;
+          }
+        }
+
+        // 脉动效果
+        this.pulsePhase += this.pulseSpeed;
+        this.alpha = this.originalAlpha * (0.7 + 0.3 * Math.sin(this.pulsePhase));
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.globalAlpha = this.alpha;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+      }
+    }
+
+    // 绘制动态渐变背景
+    function drawDynamicBackground() {
+      gradientOffset += 0.002;
+      const gradient = ctx.createLinearGradient(
+        0, 0,
+        width * Math.cos(gradientOffset),
+        height * Math.sin(gradientOffset)
+      );
+
+      gradient.addColorStop(0, 'rgba(10, 10, 30, 0.8)');
+      gradient.addColorStop(0.5, 'rgba(20, 20, 50, 0.6)');
+      gradient.addColorStop(1, 'rgba(30, 10, 40, 0.8)');
+
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, width, height);
+    }
+
+    // 绘制高级网格
+    function drawAdvancedGrid() {
+      const gridSize = 60;
+      const lineWidth = 0.8;
+      const glowIntensity = 0.1 + 0.05 * Math.sin(time * 0.01);
+
+      ctx.strokeStyle = `rgba(10, 255, 255, ${0.03 + glowIntensity * 0.02})`;
+      ctx.lineWidth = lineWidth;
+
+      // 垂直线
+      for (let x = 0; x < width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+        ctx.stroke();
+      }
+
+      // 水平线
+      for (let y = 0; y < height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(width, y);
+        ctx.stroke();
+      }
+
+      // 网格交点光点
+      for (let x = 0; x < width; x += gridSize) {
+        for (let y = 0; y < height; y += gridSize) {
+          if ((x / gridSize + y / gridSize) % 2 === 0) {
+            const glow = 0.3 + 0.2 * Math.sin(time * 0.02 + x * 0.001 + y * 0.001);
+            ctx.beginPath();
+            ctx.arc(x, y, 1, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(10, 255, 255, ${glow * 0.3})`;
+            ctx.fill();
+          }
+        }
+      }
+
+      // 扫描线效果
+      const scanY = (time * 2) % height;
+      const scanGradient = ctx.createLinearGradient(0, scanY - 50, 0, scanY + 50);
+      scanGradient.addColorStop(0, 'rgba(10, 255, 255, 0)');
+      scanGradient.addColorStop(0.5, 'rgba(10, 255, 255, 0.1)');
+      scanGradient.addColorStop(1, 'rgba(10, 255, 255, 0)');
+
+      ctx.fillStyle = scanGradient;
+      ctx.fillRect(0, scanY - 50, width, 100);
+    }
+
+    // 绘制中心光晕
+    function drawCenterGlow() {
+      const centerX = width / 2;
+      const centerY = height / 2;
+      const maxRadius = Math.min(width, height) / 2;
+      const pulse = 0.5 + 0.5 * Math.sin(time * 0.005);
+
+      // 多层光晕
+      for (let i = 3; i > 0; i--) {
+        const radius = maxRadius * (i / 3) * (0.8 + pulse * 0.2);
+        const gradient = ctx.createRadialGradient(
+          centerX, centerY, 0,
+          centerX, centerY, radius
+        );
+        gradient.addColorStop(0, `rgba(10, 255, 255, ${0.05 * (4 - i)})`);
+        gradient.addColorStop(1, 'rgba(10, 255, 255, 0)');
+
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+      }
+    }
+
+    // 初始化粒子
+    function initParticles() {
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    // 连接粒子（带动态效果）
+    function connectParticles() {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < connectionDistance) {
+            const opacity = 1 - distance / connectionDistance;
+            const pulse = 0.7 + 0.3 * Math.sin(time * 0.02 + i * 0.1 + j * 0.1);
+
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(10, 255, 255, ${opacity * 0.2 * pulse})`;
+            ctx.lineWidth = 0.5 + opacity * 0.5;
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    // 添加脉冲波
+    function addPulseWave(x, y) {
+      if (pulseWaves.length < 5) {
+        pulseWaves.push(new PulseWave(x, y));
+      }
+    }
+
+    // 自动生成脉冲波
+    function autoGeneratePulses() {
+      time += 1;
+      if (time % 120 === 0) { // 每2秒一个脉冲
+        addPulseWave(
+          Math.random() * width * 0.8 + width * 0.1,
+          Math.random() * height * 0.8 + height * 0.1
+        );
+      }
+    }
+
+    // 动画循环
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      // 绘制背景
+      drawDynamicBackground();
+      drawAdvancedGrid();
+      drawCenterGlow();
+
+      // 更新和绘制脉冲波
+      autoGeneratePulses();
+      for (let i = pulseWaves.length - 1; i >= 0; i--) {
+        pulseWaves[i].update();
+        pulseWaves[i].draw();
+        if (!pulseWaves[i].active) {
+          pulseWaves.splice(i, 1);
+        }
+      }
+
+      // 更新和绘制粒子
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+      });
+
+      connectParticles();
+      requestAnimationFrame(animate);
+    }
+
+    // 窗口大小调整
+    function handleResize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      const newParticleCount = Math.min(120, Math.floor(width * height / 8000));
+      if (newParticleCount > particles.length) {
+        for (let i = particles.length; i < newParticleCount; i++) {
+          particles.push(new Particle());
+        }
+      } else if (newParticleCount < particles.length) {
+        particles.splice(newParticleCount);
+      }
+    }
+
+    // 鼠标移动跟踪
+    function handleMouseMove(event) {
+      mouse.x = event.x;
+      mouse.y = event.y;
+
+      // 鼠标移动时偶尔生成脉冲
+      if (Math.random() < 0.02) {
+        addPulseWave(mouse.x, mouse.y);
+      }
+    }
+
+    function handleMouseLeave() {
+      mouse.x = null;
+      mouse.y = null;
+    }
+
+    // 点击生成大脉冲
+    function handleClick(event) {
+      addPulseWave(event.x, event.y);
+      // 添加额外粒子效果
+      for (let i = 0; i < 10; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = Math.random() * 3 + 1;
+        const particle = new Particle();
+        particle.x = event.x;
+        particle.y = event.y;
+        particle.speedX = Math.cos(angle) * speed;
+        particle.speedY = Math.sin(angle) * speed;
+        particle.size = Math.random() * 1.5 + 0.5;
+        particles.push(particle);
+      }
+    }
+
+    // 事件监听
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseleave', handleMouseLeave);
+    window.addEventListener('click', handleClick);
+
+    // 启动
+    initParticles();
+    animate();
+
+    // 清理函数
+    window.cleanupTechBackground = function() {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseleave', handleMouseLeave);
+      window.removeEventListener('click', handleClick);
+    };
+  }
+})();
+;
+
+// 初始化高级装饰元素
+document.addEventListener('DOMContentLoaded', function() {
+  const body = document.body;
+
+  // 添加全息投影层
+  const hologram = document.createElement('div');
+  hologram.className = 'hologram-effect';
+  body.appendChild(hologram);
+
+  // 添加数据流线条
+  for (let i = 0; i < 8; i++) {
+    const flow = document.createElement('div');
+    flow.className = 'data-flow';
+    flow.style.left = Math.random() * 100 + 'vw';
+    flow.style.animationDelay = Math.random() * 8 + 's';
+    flow.style.transform = `rotate(${Math.random() * 30 - 15}deg)`;
+    body.appendChild(flow);
+  }
+
+  // 添加能量节点
+  for (let i = 0; i < 15; i++) {
+    setTimeout(() => {
+      const node = document.createElement('div');
+      node.className = 'energy-node';
+      node.style.left = Math.random() * 100 + 'vw';
+      node.style.top = Math.random() * 100 + 'vh';
+      node.style.animation = `pulse ${Math.random() * 3 + 2}s ease-in-out infinite`;
+      body.appendChild(node);
+
+      // 动态移动能量节点
+      setInterval(() => {
+        node.style.left = Math.random() * 100 + 'vw';
+        node.style.top = Math.random() * 100 + 'vh';
+      }, Math.random() * 5000 + 3000);
+    }, i * 300);
+  }
+
+  // 添加扫描线
+  const scanLine = document.createElement('div');
+  scanLine.className = 'scan-line';
+  body.appendChild(scanLine);
+
+  // 动态更新扫描线
+  setInterval(() => {
+    scanLine.style.top = '0';
+    scanLine.style.left = Math.random() * 20 + 40 + 'vw';
+    scanLine.style.width = Math.random() * 30 + 20 + 'vw';
+  }, 4000);
+});
+
+// 添加脉冲动画
+const style = document.createElement('style');
+style.textContent = `
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.5); opacity: 1; }
+}
+`;
+document.head.appendChild(style);
+</script></body></html>

@@ -1394,7 +1394,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #85ffe8;
+    background: #7c7163;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1644,6 +1644,11 @@ pre code {
   border: 1px solid #eee;
   max-width: 120px;
   padding: 2px;
+  border-radius: 50%;
+  transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  transform: rotateZ(360deg);
 }
 .site-author-name {
   color: var(--text-color);
@@ -2975,5 +2980,158 @@ select {
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
+  }
+}
+/* 科技感背景样式 */
+:root {
+  --tech-primary: #0ff0fc;
+  --tech-secondary: #7a04eb;
+  --tech-dark: #0a0a1a;
+  --tech-grid: rgba(10,255,255,0.1);
+}
+/* 背景画布容器 */
+#tech-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -9999;
+  pointer-events: none;
+  background: linear-gradient(135deg, #0a0a1a 0%, #13133a 50%, #0a1a2a 100%);
+}
+/* 确保内容在背景之上 */
+body {
+  position: relative;
+  background: transparent !important;
+}
+/* 为文章内容添加透明背景，平衡背景可见性和文字可读性 */
+.main-inner {
+  background: rgba(75,75,103,0.6);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(208,216,216,0.1);
+  backdrop-filter: blur(12px);
+}
+/* 头部导航栏透明效果 - 更透明 */
+.header-inner {
+  background: rgba(10,10,26,0.7);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(10,255,255,0.3);
+}
+/* 增强文字可读性 - 更高对比度 */
+body {
+  color: #f0f0ff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+/* 链接科技感颜色 */
+a {
+  color: var(--tech-primary);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(10,255,255,0.5);
+}
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 20px var(--tech-primary), 0 0 30px rgba(10,255,255,0.8);
+}
+/* 按钮科技感样式 */
+.btn {
+  background: linear-gradient(90deg, var(--tech-secondary), var(--tech-primary));
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 8px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: none;
+  box-shadow: 0 4px 15px rgba(10,255,255,0.3);
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(10,255,255,0.6);
+}
+/* 代码块科技感边框 - 更透明 */
+.highlight {
+  border: 1px solid rgba(10,255,255,0.5);
+  border-radius: 8px;
+  background: rgba(10,20,30,0.6) !important;
+  backdrop-filter: blur(10px);
+}
+/* 标题科技感渐变 */
+.post-title a {
+  background: linear-gradient(90deg, var(--tech-primary), var(--tech-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+/* 页脚透明效果 - 更透明 */
+.footer {
+  background: rgba(10,10,26,0.7);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(10,255,255,0.3);
+}
+/* 增强文章内容可读性 - 更高对比度 */
+.post-body p {
+  color: #f5f5ff;
+  line-height: 1.8;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+.post-body h1,
+.post-body h2,
+.post-body h3,
+.post-body h4 {
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+/* 卡片透明效果增强 - 更透明 */
+.card,
+.post-block,
+.sidebar-inner {
+  background: rgba(18,18,36,0.6);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(10,255,255,0.3);
+}
+/* 表格透明效果 - 更透明 */
+table {
+  background: rgba(18,18,36,0.55);
+  backdrop-filter: blur(10px);
+}
+table th {
+  background: rgba(10,255,255,0.2);
+}
+table td {
+  background: rgba(18,18,36,0.5);
+}
+/* 额外透明效果增强 */
+.post-meta {
+  background: rgba(18,18,36,0.55);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(10,255,255,0.2);
+}
+.pagination {
+  background: rgba(18,18,36,0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(10,255,255,0.25);
+}
+/* 暗色模式调整 */
+.dark-mode #tech-background {
+  background: linear-gradient(135deg, #050510 0%, #0a0a1a 50%, #05101a 100%);
+}
+.dark-mode .main-inner {
+  background: rgba(10,10,20,0.65);
+}
+/* 响应式调整 */
+@media (max-width: 767px) {
+  .main-inner {
+    padding: 20px 15px;
+    margin: 10px;
+  }
+  #tech-background {
+/* 移动端性能优化 */
+    opacity: 0.9;
   }
 }

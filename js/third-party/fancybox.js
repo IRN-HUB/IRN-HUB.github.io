@@ -6,7 +6,11 @@ document.addEventListener('page:loaded', () => {
    * Wrap images with fancybox.
    */
   document.querySelectorAll('.post-body :not(a) > img, .post-body > img').forEach(image => {
-    const imageLink = image.dataset.src || image.src;
+    let imageLink = image.dataset.src || image.src;
+    // 如果图片有 data-fancybox-avatar 属性，使用头像图片
+    if (image.dataset.fancyboxAvatar) {
+      imageLink = '/images/touxiang.jpg';
+    }
     const imageWrapLink = document.createElement('a');
     imageWrapLink.classList.add('fancybox');
     imageWrapLink.href = imageLink;
